@@ -16,14 +16,9 @@ import * as R from 'ramda';
  * {@see https://ramdajs.com/docs/#dec}
  */
 describe('math.inc', () => {
-  it('should define R.inc', () => {
+  it('should increment a value', () => {
     expect.assertions(1);
 
-    expect(R.inc).toBeDefined();
-  });
-
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.inc', () => {
-    expect.assertions(1);
+    expect(R.inc(42)).toBe(43);
   });
 });

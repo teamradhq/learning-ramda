@@ -19,11 +19,6 @@ describe('math.dec', () => {
   it('should define R.dec', () => {
     expect.assertions(1);
 
-    expect(R.dec).toBeDefined();
-  });
-
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.dec', () => {
-    expect.assertions(1);
+    expect(R.dec(101)).toBe(100);
   });
 });

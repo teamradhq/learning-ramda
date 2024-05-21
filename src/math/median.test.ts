@@ -18,14 +18,16 @@ import * as R from 'ramda';
  * {@see https://ramdajs.com/docs/#mean}
  */
 describe('math.median', () => {
-  it('should define R.median', () => {
-    expect.assertions(1);
+  it('should compute the median', () => {
+    expect.assertions(2);
 
-    expect(R.median).toBeDefined();
+    expect(R.median([2, 9, 7])).toBe(7);
+    expect(R.median([7, 2, 10, 9])).toBe(8);
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.median', () => {
+  it('should be NaN for empty list', () => {
     expect.assertions(1);
+
+    expect(R.median([])).toBeNaN();
   });
 });

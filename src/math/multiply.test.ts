@@ -1,5 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
+import exp from 'node:constants';
 
 /**
  * Name:       multiply
@@ -20,14 +21,14 @@ import * as R from 'ramda';
  * {@see https://ramdajs.com/docs/#divide}
  */
 describe('math.multiply', () => {
-  it('should define R.multiply', () => {
-    expect.assertions(1);
+  it('should should multiply values', () => {
+    expect.assertions(3);
 
-    expect(R.multiply).toBeDefined();
-  });
+    const double = R.multiply(2);
+    const triple = R.multiply(3);
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.multiply', () => {
-    expect.assertions(1);
+    expect(double(3)).toBe(6);
+    expect(triple(4)).toBe(12);
+    expect(R.multiply(2, 5)).toBe(10);
   });
 });

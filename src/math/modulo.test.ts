@@ -25,14 +25,19 @@ import * as R from 'ramda';
  * {@see https://ramdajs.com/docs/#mathMod}
  */
 describe('math.modulo', () => {
-  it('should define R.modulo', () => {
-    expect.assertions(1);
+  it('should provide the modulus', () => {
+    expect.assertions(3);
 
-    expect(R.modulo).toBeDefined();
+    expect(R.modulo(17, 3)).toBe(2);
+    expect(R.modulo(-17, 3)).toBe(-2);
+    expect(R.modulo(17, -3)).toBe(2);
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.modulo', () => {
-    expect.assertions(1);
+  it('should be odd or even', () => {
+    expect.assertions(2);
+
+    const isOdd = R.modulo(R.__, 2);
+    expect(isOdd(42)).toBe(0);
+    expect(isOdd(21)).toBe(1);
   });
 });

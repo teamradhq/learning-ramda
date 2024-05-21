@@ -17,14 +17,15 @@ import * as R from 'ramda';
  * {@see https://ramdajs.com/docs/#median}
  */
 describe('math.mean', () => {
-  it('should define R.mean', () => {
+  it('should provide the mean', () => {
     expect.assertions(1);
 
-    expect(R.mean).toBeDefined();
+    expect(R.mean([2, 7, 9])).toBe(6);
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.mean', () => {
+  it('should provide NaN if empty', () => {
     expect.assertions(1);
+
+    expect(R.mean([])).toBeNaN();
   });
 });

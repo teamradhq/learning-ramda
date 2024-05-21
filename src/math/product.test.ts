@@ -16,14 +16,9 @@ import * as R from 'ramda';
  * {@see https://ramdajs.com/docs/#reduce}
  */
 describe('math.product', () => {
-  it('should define R.product', () => {
+  it('should yield the product', () => {
     expect.assertions(1);
 
-    expect(R.product).toBeDefined();
-  });
-
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.product', () => {
-    expect.assertions(1);
+    expect(R.product([2, 4, 6, 8, 100, 1])).toBe(38400);
   });
 });

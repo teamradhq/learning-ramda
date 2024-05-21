@@ -16,14 +16,9 @@ import * as R from 'ramda';
  * {@see https://ramdajs.com/docs/#reduce}
  */
 describe('math.sum', () => {
-  it('should define R.sum', () => {
+  it('should sum the values', () => {
     expect.assertions(1);
 
-    expect(R.sum).toBeDefined();
-  });
-
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.sum', () => {
-    expect.assertions(1);
+    expect(R.sum([2, 4, 6, 8, 100, 1])).toBe(121);
   });
 });

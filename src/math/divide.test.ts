@@ -22,14 +22,23 @@ import * as R from 'ramda';
  * {@see https://ramdajs.com/docs/#multiply}
  */
 describe('math.divide', () => {
-  it('should define R.divide', () => {
+  it('should divide a number', () => {
     expect.assertions(1);
 
-    expect(R.divide).toBeDefined();
+    expect(R.divide(71, 100)).toBe(0.71);
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.divide', () => {
+  it('should halve a number', () => {
     expect.assertions(1);
+
+    const half = R.divide(R.__, 2);
+    expect(half(42)).toBe(21);
+  });
+
+  it('should find the reciprocal of a number', () => {
+    expect.assertions(1);
+
+    const reciprocal = R.divide(1);
+    expect(reciprocal(4)).toBe(0.25);
   });
 });

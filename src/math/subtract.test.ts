@@ -23,14 +23,25 @@ import * as R from 'ramda';
  * {@see https://ramdajs.com/docs/#add}
  */
 describe('math.subtract', () => {
-  it('should define R.subtract', () => {
+  it('should subtract a value', () => {
     expect.assertions(1);
 
-    expect(R.subtract).toBeDefined();
+    expect(R.subtract(10, 8)).toBe(2);
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.subtract', () => {
+  it('should minus 5', () => {
     expect.assertions(1);
+
+    const minus5 = R.subtract(R.__, 5);
+    expect(minus5(17)).toBe(12);
+  });
+
+  it('should give the complementary angle', () => {
+    expect.assertions(2);
+
+    const complementaryAngle = R.subtract(90);
+
+    expect(complementaryAngle(30)).toBe(60);
+    expect(complementaryAngle(72)).toBe(18);
   });
 });

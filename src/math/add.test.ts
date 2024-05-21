@@ -17,14 +17,10 @@ import * as R from 'ramda';
  * {@see https://ramdajs.com/docs/#subtract}
  */
 describe('math.add', () => {
-  it('should define R.add', () => {
-    expect.assertions(1);
+  it('should add two numbers', () => {
+    expect.assertions(2);
 
-    expect(R.add).toBeDefined();
-  });
-
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.add', () => {
-    expect.assertions(1);
+    expect(R.add(2, 3)).toBe(5);
+    expect(R.add(7)(10)).toBe(17);
   });
 });
