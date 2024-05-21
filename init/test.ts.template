@@ -1,0 +1,16 @@
+import { describe, expect, it } from '@jest/globals';
+import * as R from 'ramda';
+
+/** {{docs}} */
+describe('{{category}}.{{func}}', () => {
+  it('should define R.{{func}}', () => {
+    expect.assertions(1);
+
+    expect(R.{{func}}).toBeDefined();
+  });
+
+  // eslint-disable-next-line jest/no-disabled-tests
+  it.skip('should demonstrate how to use R.{{func}}', () => {
+    expect.assertions(1);
+  });
+});
