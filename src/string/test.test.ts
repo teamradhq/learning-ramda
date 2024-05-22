@@ -1,18 +1,18 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       test
  * Category:   string
- * 
+ *
  * Determines whether a given string matches a given regular expression.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.test(/^x/, 'xyz'); //=> true
  * R.test(/^y/, 'xyz'); //=> false
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#test}
  * {@see https://ramdajs.com/docs/#match}
  */

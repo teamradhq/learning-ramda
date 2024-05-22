@@ -1,10 +1,10 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       empty
  * Category:   function
- * 
+ *
  * Returns the empty value of its argument's type. Ramda defines the empty
  * value of Array ([]), Object ({}), String (''),
  * TypedArray (Uint8Array [], Float32Array [], etc), and Arguments. Other
@@ -12,8 +12,8 @@ import * as R from 'ramda';
  * <Type>.prototype.empty or implement the
  * FantasyLand Monoid spec.
  * Dispatches to the empty method of the first argument, if present.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.empty(Just(42));               //=> Nothing()
  * R.empty([1, 2, 3]);              //=> []
@@ -21,7 +21,7 @@ import * as R from 'ramda';
  * R.empty({x: 1, y: 2});           //=> {}
  * R.empty(Uint8Array.from('123')); //=> Uint8Array []
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#empty}
  */
 describe('function.empty', () => {

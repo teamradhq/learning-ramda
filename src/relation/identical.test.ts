@@ -1,17 +1,17 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       identical
  * Category:   relation
- * 
+ *
  * Returns true if its arguments are identical, false otherwise. Values are
  * identical if they reference the same memory. NaN is identical to NaN;
  * 0 and -0 are not identical.
  * Note this is merely a curried version of ES6 Object.is.
  * identical does not support the __ placeholder.
- * 
- * 
+ *
+ *
  * ```typescript
  * const o = {};
  * R.identical(o, o); //=> true
@@ -21,7 +21,7 @@ import * as R from 'ramda';
  * R.identical(0, -0); //=> false
  * R.identical(NaN, NaN); //=> true
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#identical}
  */
 describe('relation.identical', () => {

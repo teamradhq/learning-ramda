@@ -1,10 +1,10 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       into
  * Category:   list
- * 
+ *
  * Transforms the items of the list with the transducer and appends the
  * transformed items to the accumulator using an appropriate iterator function
  * based on the accumulator type.
@@ -19,18 +19,18 @@ import * as R from 'ramda';
  * init function is used to provide the initial accumulator.
  * The iteration is performed with R.reduce after initializing the
  * transducer.
- * 
- * 
+ *
+ *
  * ```typescript
  * const numbers = [1, 2, 3, 4];
  * const transducer = R.compose(R.map(R.add(1)), R.take(2));
- * 
+ *
  * R.into([], transducer, numbers); //=> [2, 3]
- * 
+ *
  * const intoArray = R.into([]);
  * intoArray(transducer, numbers); //=> [2, 3]
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#into}
  * {@see https://ramdajs.com/docs/#transduce}
  */

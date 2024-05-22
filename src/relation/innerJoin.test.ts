@@ -1,10 +1,10 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       innerJoin
  * Category:   relation
- * 
+ *
  * Takes a predicate pred, a list xs, and a list ys, and returns a list
  * xs' comprising each of the elements of xs which is equal to one or more
  * elements of ys according to pred.
@@ -13,8 +13,8 @@ import * as R from 'ramda';
  * not be significant, but since xs' is ordered the implementation guarantees
  * that its values are in the same order as they appear in xs. Duplicates are
  * not removed, so xs' may contain duplicates if xs contains duplicates.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.innerJoin(
  *   (record, id) => record.id === id,
@@ -27,7 +27,7 @@ import * as R from 'ramda';
  * );
  * //=> [{id: 456, name: 'Stephen Stills'}, {id: 177, name: 'Neil Young'}]
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#innerJoin}
  * {@see https://ramdajs.com/docs/#intersection}
  */

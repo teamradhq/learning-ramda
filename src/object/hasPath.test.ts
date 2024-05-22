@@ -1,21 +1,21 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       hasPath
  * Category:   object
- * 
+ *
  * Returns whether or not a path exists in an object. Only the object's
  * own properties are checked.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.hasPath(['a', 'b'], {a: {b: 2}});         // => true
  * R.hasPath(['a', 'b'], {a: {b: undefined}}); // => true
  * R.hasPath(['a', 'b'], {a: {c: 2}});         // => false
  * R.hasPath(['a', 'b'], {});                  // => false
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#hasPath}
  * {@see https://ramdajs.com/docs/#has}
  */

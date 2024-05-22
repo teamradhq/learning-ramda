@@ -1,15 +1,15 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       propOr
  * Category:   object
- * 
+ *
  * Return the specified property of the given non-null object if the property
  * is present and it's value is not null, undefined or NaN.
  * Otherwise the first argument is returned.
- * 
- * 
+ *
+ *
  * ```typescript
  * const alice = {
  *   name: 'ALICE',
@@ -17,11 +17,11 @@ import * as R from 'ramda';
  * };
  * const favorite = R.prop('favoriteLibrary');
  * const favoriteWithDefault = R.propOr('Ramda', 'favoriteLibrary');
- * 
+ *
  * favorite(alice);  //=> undefined
  * favoriteWithDefault(alice);  //=> 'Ramda'
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#propOr}
  */
 describe('object.propOr', () => {

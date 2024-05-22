@@ -1,14 +1,14 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       gt
  * Category:   relation
- * 
+ *
  * Returns true if the first argument is greater than the second; false
  * otherwise.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.gt(2, 1); //=> true
  * R.gt(2, 2); //=> false
@@ -16,7 +16,7 @@ import * as R from 'ramda';
  * R.gt('a', 'z'); //=> false
  * R.gt('z', 'a'); //=> true
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#gt}
  * {@see https://ramdajs.com/docs/#lt}
  */

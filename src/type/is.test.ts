@@ -1,15 +1,15 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       is
  * Category:   type
- * 
+ *
  * See if an object (i.e. val) is an instance of the supplied constructor. This
  * function will check up the inheritance chain, if any.
  * If val was created using Object.create, R.is(Object, val) === true.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.is(Object, {}); //=> true
  * R.is(Number, 1); //=> true
@@ -20,7 +20,7 @@ import * as R from 'ramda';
  * R.is(Object, 's'); //=> false
  * R.is(Number, {}); //=> false
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#is}
  */
 describe('type.is', () => {

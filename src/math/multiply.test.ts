@@ -1,6 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
-import exp from 'node:constants';
 
 /**
  * Name:       multiply

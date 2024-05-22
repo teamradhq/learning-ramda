@@ -1,10 +1,10 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       forEach
  * Category:   list
- * 
+ *
  * Iterate over an input list, calling a provided function fn for each
  * element in the list.
  * fn receives one argument: (value).
@@ -15,8 +15,8 @@ import * as R from 'ramda';
  * Also note that, unlike Array.prototype.forEach, Ramda's forEach returns
  * the original array. In some libraries this function is named each.
  * Dispatches to the forEach method of the second argument, if present.
- * 
- * 
+ *
+ *
  * ```typescript
  * const printXPlusFive = x => console.log(x + 5);
  * R.forEach(printXPlusFive, [1, 2, 3]); //=> [1, 2, 3]
@@ -24,7 +24,7 @@ import * as R from 'ramda';
  * // logs 7
  * // logs 8
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#forEach}
  * {@see https://ramdajs.com/docs/#addIndex}
  */

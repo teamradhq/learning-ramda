@@ -1,17 +1,17 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       toLower
  * Category:   string
- * 
+ *
  * The lower case version of a string.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.toLower('XYZ'); //=> 'xyz'
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#toLower}
  * {@see https://ramdajs.com/docs/#toUpper}
  */

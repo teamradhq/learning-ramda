@@ -1,15 +1,15 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       includes
  * Category:   list
- * 
+ *
  * Returns true if the specified value is equal, in R.equals
  * terms, to at least one element of the given list; false otherwise.
  * Also works with strings.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.includes(3, [1, 2, 3]); //=> true
  * R.includes(4, [1, 2, 3]); //=> false
@@ -17,7 +17,7 @@ import * as R from 'ramda';
  * R.includes([42], [[42]]); //=> true
  * R.includes('ba', 'banana'); //=>true
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#includes}
  * {@see https://ramdajs.com/docs/#any}
  */

@@ -1,16 +1,16 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       type
  * Category:   type
- * 
+ *
  * Gives a single-word string description of the (native) type of a value,
  * returning such answers as 'Object', 'Number', 'Array', or 'Null'. Does not
  * attempt to distinguish user Object types any further, reporting them all as
  * 'Object'.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.type({}); //=> "Object"
  * R.type(1); //=> "Number"
@@ -24,7 +24,7 @@ import * as R from 'ramda';
  * R.type(undefined); //=> "Undefined"
  * R.type(BigInt(123)); //=> "BigInt"
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#type}
  */
 describe('type.type', () => {

@@ -1,18 +1,18 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       prepend
  * Category:   list
- * 
+ *
  * Returns a new list with the given element at the front, followed by the
  * contents of the list.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.prepend('fee', ['fi', 'fo', 'fum']); //=> ['fee', 'fi', 'fo', 'fum']
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#prepend}
  * {@see https://ramdajs.com/docs/#append}
  */

@@ -1,13 +1,13 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       objOf
  * Category:   object
- * 
+ *
  * Creates an object containing a single key:value pair.
- * 
- * 
+ *
+ *
  * ```typescript
  * const matchPhrases = R.compose(
  *   R.objOf('must'),
@@ -15,7 +15,7 @@ import * as R from 'ramda';
  * );
  * matchPhrases(['foo', 'bar', 'baz']); //=> {must: [{match_phrase: 'foo'}, {match_phrase: 'bar'}, {match_phrase: 'baz'}]}
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#objOf}
  * {@see https://ramdajs.com/docs/#pair}
  */

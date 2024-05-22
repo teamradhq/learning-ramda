@@ -1,18 +1,18 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       length
  * Category:   list
- * 
+ *
  * Returns the number of elements in the array by returning list.length.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.length([]); //=> 0
  * R.length([1, 2, 3]); //=> 3
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#length}
  */
 describe('list.length', () => {

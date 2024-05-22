@@ -1,10 +1,10 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       concat
  * Category:   list
- * 
+ *
  * Returns the result of concatenating the given lists or strings.
  * Note: R.concat expects both arguments to be of the same type,
  * unlike the native Array.prototype.concat method. It will throw
@@ -12,14 +12,14 @@ import * as R from 'ramda';
  * Dispatches to the concat method of the first argument, if present.
  * Can also concatenate two members of a fantasy-land
  * compatible semigroup.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.concat('ABC', 'DEF'); // 'ABCDEF'
  * R.concat([4, 5, 6], [1, 2, 3]); //=> [4, 5, 6, 1, 2, 3]
  * R.concat([], []); //=> []
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#concat}
  */
 describe('list.concat', () => {

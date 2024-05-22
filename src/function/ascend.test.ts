@@ -1,14 +1,14 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       ascend
  * Category:   function
- * 
+ *
  * Makes an ascending comparator function out of a function that returns a value
  * that can be compared with < and >.
- * 
- * 
+ *
+ *
  * ```typescript
  * const byAge = R.ascend(R.prop('age'));
  * const people = [
@@ -19,7 +19,7 @@ import * as R from 'ramda';
  * const peopleByYoungestFirst = R.sort(byAge, people);
  *   //=> [{ name: 'Mikhail', age: 62 },{ name: 'Emma', age: 70 }, { name: 'Peter', age: 78 }]
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#ascend}
  * {@see https://ramdajs.com/docs/#descend}
  */

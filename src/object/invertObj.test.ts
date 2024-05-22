@@ -1,15 +1,15 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       invertObj
  * Category:   object
- * 
+ *
  * Returns a new object with the keys of the given object as values, and the
  * values of the given object, which are coerced to strings, as keys. Note
  * that the last key found is preferred when handling the same value.
- * 
- * 
+ *
+ *
  * ```typescript
  * const raceResults = {
  *   first: 'alice',
@@ -17,13 +17,13 @@ import * as R from 'ramda';
  * };
  * R.invertObj(raceResults);
  * //=> { 'alice': 'first', 'jake':'second' }
- * 
+ *
  * // Alternatively:
  * const raceResults = ['alice', 'jake'];
  * R.invertObj(raceResults);
  * //=> { 'alice': '0', 'jake':'1' }
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#invertObj}
  * {@see https://ramdajs.com/docs/#invert}
  */

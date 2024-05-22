@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "NODE_ENV=test jest --config jest.config.ts",
     "test:ci": "NODE_ENV=test jest --config jest.config.ts --testPathIgnorePatterns jest",
-    "test:init": "ts-node -r tsconfig-paths/register ./init/init.ts",
+    "dev:init": "ts-node -r tsconfig-paths/register ./init/init.ts",
     "test:coverage": "npm run test -- --coverage --testPathIgnorePatterns jest"
   },
   "devDependencies": {

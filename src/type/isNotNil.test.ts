@@ -1,20 +1,20 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       isNotNil
  * Category:   type
- * 
+ *
  * Checks if the input value is not null and not undefined.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.isNotNil(null); //=> false
  * R.isNotNil(undefined); //=> false
  * R.isNotNil(0); //=> true
  * R.isNotNil([]); //=> true
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#isNotNil}
  */
 describe('type.isNotNil', () => {

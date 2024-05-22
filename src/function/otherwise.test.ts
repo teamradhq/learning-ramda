@@ -1,19 +1,19 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       otherwise
  * Category:   function
- * 
+ *
  * Returns the result of applying the onFailure function to the value inside
  * a failed promise. This is useful for handling rejected promises
  * inside function compositions.
- * 
- * 
+ *
+ *
  * ```typescript
  * const failedFetch = id => Promise.reject('bad ID');
  * const useDefault = () => ({ firstName: 'Bob', lastName: 'Loblaw' });
- * 
+ *
  * //recoverFromFailure :: String -> Promise ({ firstName, lastName })
  * const recoverFromFailure = R.pipe(
  *   failedFetch,
@@ -22,7 +22,7 @@ import * as R from 'ramda';
  * );
  * recoverFromFailure(12345).then(console.log);
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#otherwise}
  * {@see https://ramdajs.com/docs/#andThen}
  */

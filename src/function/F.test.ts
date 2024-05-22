@@ -1,17 +1,17 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       F
  * Category:   function
- * 
+ *
  * A function that always returns false. Any passed in parameters are ignored.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.F(); //=> false
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#F}
  * {@see https://ramdajs.com/docs/#T}
  */

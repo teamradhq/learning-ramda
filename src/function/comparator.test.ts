@@ -1,14 +1,14 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       comparator
  * Category:   function
- * 
+ *
  * Makes a comparator function out of a function that reports whether the first
  * element is less than the second.
- * 
- * 
+ *
+ *
  * ```typescript
  * const byAge = R.comparator((a, b) => a.age < b.age);
  * const people = [
@@ -19,7 +19,7 @@ import * as R from 'ramda';
  * const peopleByIncreasingAge = R.sort(byAge, people);
  *   //=> [{ name: 'Mikhail', age: 62 },{ name: 'Emma', age: 70 }, { name: 'Peter', age: 78 }]
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#comparator}
  */
 describe('function.comparator', () => {

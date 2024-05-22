@@ -1,18 +1,18 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       trim
  * Category:   string
- * 
+ *
  * Removes (strips) whitespace from both ends of the string.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.trim('   xyz  '); //=> 'xyz'
  * R.map(R.trim, R.split(',', 'x, y, z')); //=> ['x', 'y', 'z']
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#trim}
  */
 describe('string.trim', () => {

@@ -1,14 +1,14 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       invert
  * Category:   object
- * 
+ *
  * Same as R.invertObj, however this accounts for objects with
  * duplicate values by putting the values into an array.
- * 
- * 
+ *
+ *
  * ```typescript
  * const raceResultsByFirstName = {
  *   first: 'alice',
@@ -18,7 +18,7 @@ import * as R from 'ramda';
  * R.invert(raceResultsByFirstName);
  * //=> { 'alice': ['first', 'third'], 'jake':['second'] }
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#invert}
  * {@see https://ramdajs.com/docs/#invertObj}
  */

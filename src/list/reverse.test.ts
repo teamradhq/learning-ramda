@@ -1,26 +1,26 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       reverse
  * Category:   list
- * 
+ *
  * Returns a new list or string with the elements or characters in reverse
  * order.
- * 
- * 
+ *
+ *
  * ```typescript
  * R.reverse([1, 2, 3]);  //=> [3, 2, 1]
  * R.reverse([1, 2]);     //=> [2, 1]
  * R.reverse([1]);        //=> [1]
  * R.reverse([]);         //=> []
- * 
+ *
  * R.reverse('abc');      //=> 'cba'
  * R.reverse('ab');       //=> 'ba'
  * R.reverse('a');        //=> 'a'
  * R.reverse('');         //=> ''
  * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#reverse}
  */
 describe('list.reverse', () => {
