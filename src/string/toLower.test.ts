@@ -7,23 +7,13 @@ import * as R from 'ramda';
  *
  * The lower case version of a string.
  *
- *
- * ```typescript
- * R.toLower('XYZ'); //=> 'xyz'
- * ```
- *
  * {@see https://ramdajs.com/docs/#toLower}
  * {@see https://ramdajs.com/docs/#toUpper}
  */
 describe('string.toLower', () => {
-  it('should define R.toLower', () => {
+  it('should cast to lowercase', () => {
     expect.assertions(1);
 
-    expect(R.toLower).toBeDefined();
-  });
-
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.toLower', () => {
-    expect.assertions(1);
+    expect(R.toLower('XYZ')).toBe('xyz');
   });
 });

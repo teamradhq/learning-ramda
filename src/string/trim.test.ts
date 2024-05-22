@@ -7,23 +7,18 @@ import * as R from 'ramda';
  *
  * Removes (strips) whitespace from both ends of the string.
  *
- *
- * ```typescript
- * R.trim('   xyz  '); //=> 'xyz'
- * R.map(R.trim, R.split(',', 'x, y, z')); //=> ['x', 'y', 'z']
- * ```
- *
  * {@see https://ramdajs.com/docs/#trim}
  */
 describe('string.trim', () => {
-  it('should define R.trim', () => {
+  it('should trim the string', () => {
     expect.assertions(1);
 
-    expect(R.trim).toBeDefined();
+    expect(R.trim('   xyz  ')).toBe('xyz');
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.trim', () => {
+  it('should trim all the strings', () => {
     expect.assertions(1);
+
+    expect(R.map(R.trim, R.split(',', 'x, y, z'))).toStrictEqual(['x', 'y', 'z']);
   });
 });

@@ -7,28 +7,29 @@ import * as R from 'ramda';
  *
  * Tests a regular expression against a String. Note that this function will
  * return an empty array when there are no matches. This differs from
- * String.prototype.match
- * which returns null when there are no matches.
- *
- *
- * ```typescript
- * R.match(/([a-z]a)/g, 'bananas'); //=> ['ba', 'na', 'na']
- * R.match(/a/, 'b'); //=> []
- * R.match(/a/, null); //=> TypeError: null does not have a method named "match"
- * ```
+ * String.prototype.match  which returns null when there are no matches.
  *
  * {@see https://ramdajs.com/docs/#match}
  * {@see https://ramdajs.com/docs/#test}
  */
 describe('string.match', () => {
-  it('should define R.match', () => {
+  it('should match *a*a*a', () => {
     expect.assertions(1);
 
-    expect(R.match).toBeDefined();
+    expect(R.match(/([a-z]a)/g, 'bananas')).toStrictEqual(['ba', 'na', 'na']);
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.match', () => {
+  it('should provide empty match array', () => {
     expect.assertions(1);
+
+    expect(R.match(/a/, 'b')).toStrictEqual([]);
+  });
+
+  it('raise a TypeError if no match method', () => {
+    expect.assertions(1);
+
+    const shouldThrow = () => R.match(/a/, null as unknown as string);
+
+    expect(shouldThrow).toThrow(TypeError);
   });
 });

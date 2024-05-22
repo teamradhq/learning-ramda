@@ -10,26 +10,19 @@ import * as R from 'ramda';
  * String.prototype.replace() function, so the second parameter can also be a
  * function.
  *
- *
- * ```typescript
- * R.replace('foo', 'bar', 'foo foo foo'); //=> 'bar foo foo'
- * R.replace(/foo/, 'bar', 'foo foo foo'); //=> 'bar foo foo'
- *
- * // Use the "g" (global) flag to replace all occurrences:
- * R.replace(/foo/g, 'bar', 'foo foo foo'); //=> 'bar bar bar'
- * ```
- *
  * {@see https://ramdajs.com/docs/#replace}
  */
 describe('string.replace', () => {
-  it('should define R.replace', () => {
-    expect.assertions(1);
+  it('should replace a foo', () => {
+    expect.assertions(2);
 
-    expect(R.replace).toBeDefined();
+    expect(R.replace('foo', 'bar', 'foo foo foo')).toBe('bar foo foo');
+    expect(R.replace(/foo/, 'bar', 'foo foo foo')).toBe('bar foo foo');
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.replace', () => {
+  it('should replace all foos', () => {
     expect.assertions(1);
+
+    expect(R.replace(/foo/g, 'bar', 'foo foo foo')).toBe('bar bar bar');
   });
 });

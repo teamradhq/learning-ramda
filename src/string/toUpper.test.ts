@@ -7,23 +7,13 @@ import * as R from 'ramda';
  *
  * The upper case version of a string.
  *
- *
- * ```typescript
- * R.toUpper('abc'); //=> 'ABC'
- * ```
- *
  * {@see https://ramdajs.com/docs/#toUpper}
  * {@see https://ramdajs.com/docs/#toLower}
  */
 describe('string.toUpper', () => {
-  it('should define R.toUpper', () => {
+  it('should transform to uppercase', () => {
     expect.assertions(1);
 
-    expect(R.toUpper).toBeDefined();
-  });
-
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.toUpper', () => {
-    expect.assertions(1);
+    expect(R.toUpper('abc')).toBe('ABC');
   });
 });
