@@ -1,37 +1,38 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       isNotEmpty
  * Category:   logic
- * 
+ *
  * Returns false if the given value is its type's empty value; true
  * otherwise.
- * 
- * 
- * ```typescript
- * R.isNotEmpty([1, 2, 3]);           //=> true
- * R.isNotEmpty([]);                  //=> false
- * R.isNotEmpty('');                  //=> false
- * R.isNotEmpty(null);                //=> true
- * R.isNotEmpty({});                  //=> false
- * R.isNotEmpty({length: 0});         //=> true
- * R.isNotEmpty(Uint8Array.from('')); //=> false
- * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#isNotEmpty}
- * {@see https://ramdajs.com/docs/#empty,
-                isEmpty}
+ * {@see https://ramdajs.com/docs/#empty}
+ * {@see https://ramdajs.com/docs/#isEmpty}
  */
 describe('logic.isNotEmpty', () => {
-  it('should define R.isNotEmpty', () => {
+  const notEmptyCases: [null | number[] | { length: number }][] = [
+    [[1, 2, 3]],
+    [null],
+    [{ length: 0 }],
+  ];
+  it.each(notEmptyCases)('should be notEmpty for %s', (input) => {
     expect.assertions(1);
 
-    expect(R.isNotEmpty).toBeDefined();
+    expect(R.isNotEmpty(input)).toBe(true);
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.isNotEmpty', () => {
+  const emptyCases: [null | number[] | object | string | Uint8Array][] = [
+    [[]],
+    [''],
+    [{}],
+    [Uint8Array.from([])],
+  ];
+  it.each(emptyCases)('should not be notEmpty for %s', (input) => {
     expect.assertions(1);
+
+    expect(R.isNotEmpty(input)).toBe(false);
   });
 });
