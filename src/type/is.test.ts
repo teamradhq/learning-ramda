@@ -1,3 +1,5 @@
+// noinspection JSPrimitiveTypeWrapperUsage
+
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
@@ -9,29 +11,37 @@ import * as R from 'ramda';
  * function will check up the inheritance chain, if any.
  * If val was created using Object.create, R.is(Object, val) === true.
  *
- *
- * ```typescript
- * R.is(Object, {}); //=> true
- * R.is(Number, 1); //=> true
- * R.is(Object, 1); //=> false
- * R.is(String, 's'); //=> true
- * R.is(String, new String('')); //=> true
- * R.is(Object, new String('')); //=> true
- * R.is(Object, 's'); //=> false
- * R.is(Number, {}); //=> false
- * ```
- *
  * {@see https://ramdajs.com/docs/#is}
  */
 describe('type.is', () => {
-  it('should define R.is', () => {
+  const trueCases: [ObjectConstructor | NumberConstructor | StringConstructor, unknown, boolean][] =
+    [
+      [Object, {}, true],
+      [Number, 1, true],
+      [String, 's', true],
+      [String, new String('.'), true],
+      [Object, new String('.'), true],
+    ];
+
+  it.each(trueCases)('should be true that %s is %s', (type, value, expected) => {
     expect.assertions(1);
 
-    expect(R.is).toBeDefined();
+    expect(R.is(type, value)).toStrictEqual(expected);
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.is', () => {
+  const falseCases: [
+    ObjectConstructor | NumberConstructor | StringConstructor,
+    unknown,
+    boolean,
+  ][] = [
+    [Object, 1, false],
+    [Object, 's', false],
+    [Number, {}, false],
+  ];
+
+  it.each(falseCases)('should be false that %s is %s', (type, value, expected) => {
     expect.assertions(1);
+
+    expect(R.is(type, value)).toStrictEqual(expected);
   });
 });

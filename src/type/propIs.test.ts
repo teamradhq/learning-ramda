@@ -7,27 +7,22 @@ import * as R from 'ramda';
  * 
  * Returns true if the specified object property is of the given type;
  * false otherwise.
- * 
- * 
- * ```typescript
- * R.propIs(Number, 'x', {x: 1, y: 2});  //=> true
- * R.propIs(Number, 'x', {x: 'foo'});    //=> false
- * R.propIs(Number, 'x', {});            //=> false
- * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#propIs}
  * {@see https://ramdajs.com/docs/#is,
                 propSatisfies}
  */
 describe('type.propIs', () => {
-  it('should define R.propIs', () => {
+  it('should be a number', () => {
     expect.assertions(1);
 
-    expect(R.propIs).toBeDefined();
+    expect(R.propIs(Number, 'x', { x: 1, y: 2 })).toBe(true);
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.propIs', () => {
-    expect.assertions(1);
+  it('should not be a number', () => {
+    expect.assertions(2);
+
+    expect(R.propIs(Number, 'x', { x: 'foo' })).toBe(false);
+    expect(R.propIs(Number, 'x', {})).toBe(false);
   });
 });

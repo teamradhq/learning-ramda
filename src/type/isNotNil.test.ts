@@ -7,25 +7,20 @@ import * as R from 'ramda';
  *
  * Checks if the input value is not null and not undefined.
  *
- *
- * ```typescript
- * R.isNotNil(null); //=> false
- * R.isNotNil(undefined); //=> false
- * R.isNotNil(0); //=> true
- * R.isNotNil([]); //=> true
- * ```
- *
  * {@see https://ramdajs.com/docs/#isNotNil}
  */
 describe('type.isNotNil', () => {
-  it('should define R.isNotNil', () => {
-    expect.assertions(1);
+  it('should not be not nil', () => {
+    expect.assertions(2);
 
-    expect(R.isNotNil).toBeDefined();
+    expect(R.isNotNil(null)).toBe(false);
+    expect(R.isNotNil(undefined)).toBe(false);
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.isNotNil', () => {
-    expect.assertions(1);
+  it('should be not nil', () => {
+    expect.assertions(2);
+
+    expect(R.isNotNil(0)).toBe(true);
+    expect(R.isNotNil([])).toBe(true);
   });
 });

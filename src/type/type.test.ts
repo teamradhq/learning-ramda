@@ -10,32 +10,25 @@ import * as R from 'ramda';
  * attempt to distinguish user Object types any further, reporting them all as
  * 'Object'.
  *
- *
- * ```typescript
- * R.type({}); //=> "Object"
- * R.type(1); //=> "Number"
- * R.type(false); //=> "Boolean"
- * R.type('s'); //=> "String"
- * R.type(null); //=> "Null"
- * R.type([]); //=> "Array"
- * R.type(/[A-z]/); //=> "RegExp"
- * R.type(() => {}); //=> "Function"
- * R.type(async () => {}); //=> "AsyncFunction"
- * R.type(undefined); //=> "Undefined"
- * R.type(BigInt(123)); //=> "BigInt"
- * ```
- *
  * {@see https://ramdajs.com/docs/#type}
  */
 describe('type.type', () => {
-  it('should define R.type', () => {
+  const cases: [unknown, string][] = [
+    [{}, 'Object'],
+    [1, 'Number'],
+    [false, 'Boolean'],
+    ['s', 'String'],
+    [null, 'Null'],
+    [[], 'Array'],
+    [/[A-z]/, 'RegExp'],
+    [() => {}, 'Function'],
+    [async () => {}, 'AsyncFunction'],
+    [undefined, 'Undefined'],
+    [BigInt(123), 'BigInt'],
+  ];
+  it.each(cases)('should show %s type as %s', () => {
     expect.assertions(1);
 
     expect(R.type).toBeDefined();
-  });
-
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should demonstrate how to use R.type', () => {
-    expect.assertions(1);
   });
 });
