@@ -7,11 +7,6 @@ import * as R from 'ramda';
  *
  * Increments its argument.
  *
- *
- * ```typescript
- * R.inc(42); //=> 43
- * ```
- *
  * {@see https://ramdajs.com/docs/#inc}
  * {@see https://ramdajs.com/docs/#dec}
  */

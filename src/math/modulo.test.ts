@@ -9,18 +9,6 @@ import * as R from 'ramda';
  * that this function preserves the JavaScript-style behavior for modulo. For
  * mathematical modulo see mathMod.
  *
- *
- * ```typescript
- * R.modulo(17, 3); //=> 2
- * // JS behavior:
- * R.modulo(-17, 3); //=> -2
- * R.modulo(17, -3); //=> 2
- *
- * const isOdd = R.modulo(R.__, 2);
- * isOdd(42); //=> 0
- * isOdd(21); //=> 1
- * ```
- *
  * {@see https://ramdajs.com/docs/#modulo}
  * {@see https://ramdajs.com/docs/#mathMod}
  */

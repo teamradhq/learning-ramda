@@ -7,12 +7,6 @@ import * as R from 'ramda';
  *
  * Returns the mean of the given list of numbers.
  *
- *
- * ```typescript
- * R.mean([2, 7, 9]); //=> 6
- * R.mean([]); //=> NaN
- * ```
- *
  * {@see https://ramdajs.com/docs/#mean}
  * {@see https://ramdajs.com/docs/#median}
  */

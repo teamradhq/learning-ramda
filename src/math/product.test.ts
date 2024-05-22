@@ -7,11 +7,6 @@ import * as R from 'ramda';
  *
  * Multiplies together all the elements of a list.
  *
- *
- * ```typescript
- * R.product([2,4,6,8,100,1]); //=> 38400
- * ```
- *
  * {@see https://ramdajs.com/docs/#product}
  * {@see https://ramdajs.com/docs/#reduce}
  */

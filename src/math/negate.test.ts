@@ -7,11 +7,6 @@ import * as R from 'ramda';
  *
  * Negates its argument.
  *
- *
- * ```typescript
- * R.negate(42); //=> -42
- * ```
- *
  * {@see https://ramdajs.com/docs/#negate}
  */
 describe('math.negate', () => {

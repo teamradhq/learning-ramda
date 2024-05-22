@@ -7,11 +7,6 @@ import * as R from 'ramda';
  *
  * Decrements its argument.
  *
- *
- * ```typescript
- * R.dec(42); //=> 41
- * ```
- *
  * {@see https://ramdajs.com/docs/#dec}
  * {@see https://ramdajs.com/docs/#inc}
  */

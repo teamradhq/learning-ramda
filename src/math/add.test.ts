@@ -7,12 +7,6 @@ import * as R from 'ramda';
  *
  * Adds two values.
  *
- *
- * ```typescript
- * R.add(2, 3);       //=>  5
- * R.add(7)(10);      //=> 17
- * ```
- *
  * {@see https://ramdajs.com/docs/#add}
  * {@see https://ramdajs.com/docs/#subtract}
  */

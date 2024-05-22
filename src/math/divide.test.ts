@@ -7,17 +7,6 @@ import * as R from 'ramda';
  *
  * Divides two numbers. Equivalent to a / b.
  *
- *
- * ```typescript
- * R.divide(71, 100); //=> 0.71
- *
- * const half = R.divide(R.__, 2);
- * half(42); //=> 21
- *
- * const reciprocal = R.divide(1);
- * reciprocal(4);   //=> 0.25
- * ```
- *
  * {@see https://ramdajs.com/docs/#divide}
  * {@see https://ramdajs.com/docs/#multiply}
  */
