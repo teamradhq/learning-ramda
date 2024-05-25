@@ -10,7 +10,7 @@ import * as R from 'ramda';
  * by those arguments.
  * The function returned is a curried function whose arity matches that of the
  * highest-arity predicate.
- * 
+ *
  * {@see https://ramdajs.com/docs/#allPass}
  * {@see https://ramdajs.com/docs/#anyPass}
  * {@see https://ramdajs.com/docs/#both}
