@@ -1,30 +1,25 @@
 import { describe, expect, it } from '@jest/globals';
 import * as R from 'ramda';
 
-/** 
+/**
  * Name:       or
  * Category:   logic
- * 
+ *
  * Returns the first argument if it is truthy, otherwise the second argument.
  * Acts as the boolean or statement if both inputs are Booleans.
- * 
- * 
- * ```typescript
- * R.or(true, true); //=> true
- * R.or(true, false); //=> true
- * R.or(false, true); //=> true
- * R.or(false, false); //=> false
- * ```
- * 
+ *
  * {@see https://ramdajs.com/docs/#or}
- * {@see https://ramdajs.com/docs/#either,
-                and}
+ * {@see https://ramdajs.com/docs/#either},
+ * {@see https://ramdajs.com/docs/#and}
  */
 describe('logic.or', () => {
-  it('should define R.or', () => {
-    expect.assertions(1);
+  it('should be true if one or the other is true', () => {
+    expect.assertions(4);
 
-    expect(R.or).toBeDefined();
+    expect(R.or(true, true)).toBe(true);
+    expect(R.or(true, false)).toBe(true);
+    expect(R.or(false, true)).toBe(true);
+    expect(R.or(false, false)).toBe(false);
   });
 
   // eslint-disable-next-line jest/no-disabled-tests
